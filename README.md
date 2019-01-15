@@ -1,0 +1,2 @@
+# webpack
+Simple webpack boilerplate.
