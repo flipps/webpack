@@ -1,7 +1,9 @@
-$blue: lightblue;
+@import './styles/colors';
+@import './styles/components/title';
 
 body, html {
   margin: 0;
   padding: 0;
-  background-color: $blue;
+  font-size: 10px;
+  background-color: $white;
 }

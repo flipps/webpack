@@ -1,6 +1,6 @@
-const path = require('path');
-const nodeExternals = require('webpack-node-externals');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require('path')
+const nodeExternals = require('webpack-node-externals')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   entry: { main: './src/index.js' },
@@ -21,23 +21,12 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
-        }
+        },
       },
       {
         test: /\.scss$/,
-        use: [
-          "style-loader",
-          MiniCssExtractPlugin.loader,
-          "css-loader",
-          "sass-loader"
-        ],
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
-    ]
+    ],
   },
-  plugins: [
-    new MiniCssExtractPlugin({
-      filename: "[name].css",
-      chunkFilename: "[id].css"
-    })
-  ]
 }
